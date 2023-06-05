@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-width: 100%;
+            background: rgb(238, 235, 235);
+        }
+
+        .menu {
+            flex-basis: 30%;
+            margin-bottom: 20px;
+            background-color: #f4f4f4;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            margin: 5px;
+        }
+
+        .menu:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: #3498db;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .menu:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #d2d2d2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #555555;
+            position: relative;
+            z-index: 1;
+            background: white;
+        }
+
+        .menu-title {
+            padding: 15px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .notification-menu {
+            background-color: #f9fafb;
+        }
+
+        .scan-menu {
+            background-color: #ffffff;
+        }
+
+        .logout-button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 80px;
+            height: 40px;
+        }
+
+        .logout-button:hover {
+            background-color: #346f96;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .content-item {
+            flex-basis: 40%;
+            max-width: 300px;
+            background-color: #f4f4f4;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-item:hover {
+            background-color: #ebebeb;
+        }
+
+        .content-title {
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .content-text {
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="menu scan-menu">
+            <div class="menu-icon" style="background: white;">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="menu-title">Accueil</div>
+        </div>
+        <div class="menu scan-menu">
+            <div class="menu-icon" style="background: white;">
+                <i class="fas fa-qrcode"></i>
+            </div>
+            <div class="menu-title">Scanner</div>
+        </div>
+       
+        <div class="menu notification-menu" >
+            <div class="menu-icon" style="background: white;">
+                <i class="fas fa-bell"></i>
+            </div>
+            <div class="menu-title">Notifications</div>
+        </div>
+        
+        <button class="logout-button">Déconnexion</button>
+    </div></a>
+
+    <div class="content">
+        <div class="content-item">
+            <h2 class="content-title">Contenu 1</h2>
+            <p class="content-text">Ceci est le contenu de la première div.</p>
+        </div>
+        <div class="content-item">
+            <h2 class="content-title">Contenu 2</h2>
+            <p class="content-text">Ceci est le contenu de la deuxième div.</p>
+        </div>
+        <div class="content-item">
+            <h2 class="content-title">Contenu 3</h2>
+            <p class="content-text">Ceci est le contenu de la troisième div.</p>
+        </div>
+    </div>
+
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
