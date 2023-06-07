@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulaire de dépôt de dossier - Conducteur</title>
+  <link rel="stylesheet" href="../static/css/depot_dossier.css">
+  <html>
+    <body>
+       
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'tab1')">Onglet 1</button>
+    <button class="tablinks" onclick="openTab(event, 'tab2')">Onglet 2</button>
+    <button class="tablinks" onclick="openTab(event, 'tab3')">Onglet 3</button>
+    <button class="tablinks" onclick="openTab(event, 'tab4')">Onglet 4</button>
+  </div>
+
+  <div id="tab1" class="tabcontent" style="display: block;">
+    <h2>Conducteur</h2>
+    <div class="form-container">
+        <h2>Formulaire de dépôt de dossier - Conducteur</h2>
+        <form action="{{url-for=depot_dossier()}}">
+          <label for="nom">Nom complet :</label>
+          <input type="text" id="nom" name="nom" required>
+          
+          <label for="adresse">Adresse :</label>
+          <input type="text" id="adresse" name="adresse" required>
+          
+          <label for="telephone">Numéro de téléphone :</label>
+          <input type="text" id="telephone" name="telephone" required>
+          
+          <label for="email">Adresse e-mail :</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="dateNaissance">Date de naissance :</label>
+          <input type="date" id="dateNaissance" name="dateNaissance" required>
+          
+          <label for="categoriePermis">Catégorie du permis de conduire :</label>
+          <select id="categoriePermis" name="categoriePermis" required>
+            <option value="">Sélectionnez une catégorie</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+          </select>
+          
+          <label for="dateObtentionPermis">Date d'obtention du permis de conduire :</label>
+          <input type="date" id="dateObtentionPermis" name="dateObtentionPermis" required>
+          
+          <label for="paysEmissionPermis">Pays d'émission du permis de conduire :</label>
+          <input type="text" id="paysEmissionPermis" name="paysEmissionPermis" required>
+          
+          <label for="responsabilites">Description des responsabilités et des tâches liées au poste :</label>
+          <textarea id="responsabilites" name="responsabilites" required></textarea>
+          
+          <label for="motivation">Motivation :</label>
+          <textarea id="motivation" name="motivation" required></textarea>
+          
+          <label for="cv">CV :</label>
+          <input class="depot_fiche" type="file" id="cv" name="cv" required>
+          
+          <label for="photoIdentite">Photo d'identité:</label>
+          <input class="depot_fiche" type="file" id="photoIdentite" name="photoIdentite" required>
+          
+          <label for="copiePermis">Copie du permis de conduire :</label>
+          <input class="depot_fiche" type="file" id="copiePermis" name="copiePermis" required>
+          
+          <hr>
+          <input type="submit"  value="Soumettre">
+        </form>
+      </div>
+      <div id="tab2" class="tabcontent">
+        <h2>Onglet 2</h2>
+        <p>Contenu de l'onglet 2.</p>
+      </div>
+    
+      <div id="tab3" class="tabcontent">
+        <h2>Onglet 3</h2>
+        <p>Contenu de l'onglet 3.</p>
+      </div>
+    
+      <div id="tab4" class="tabcontent">
+        <h2>Onglet 4</h2>
+        <p>Contenu de l'onglet 4.</p>
+      </div> 
+
+    </body>
+
+    <script src="../static/js/depot_dossier.js"></script>
+</html>

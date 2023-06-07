@@ -3,180 +3,118 @@
 <head>
     <title>Dashboard - Accueil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-        }
-
-        .dashboard {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            min-width: 100%;
-            background: rgb(238, 235, 235);
-        }
-
-        .menu {
-            flex-basis: 30%;
-            margin-bottom: 20px;
-            background-color: #f4f4f4;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            margin: 5px;
-        }
-
-        .menu:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background-color: #3498db;
-            border-radius: 6px 6px 0 0;
-        }
-
-        .menu:hover {
-            transform: translateY(-5px);
-        }
-
-        .menu-icon {
-            width: 60px;
-            height: 60px;
-            background-color: #d2d2d2;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: #555555;
-            position: relative;
-            z-index: 1;
-            background: white;
-        }
-
-        .menu-title {
-            padding: 15px;
-            font-weight: bold;
-            color: #333333;
-        }
-
-        .notification-menu {
-            background-color: #f9fafb;
-        }
-
-        .scan-menu {
-            background-color: #ffffff;
-        }
-
-        .logout-button {
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 80px;
-            height: 40px;
-        }
-
-        .logout-button:hover {
-            background-color: #346f96;
-        }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            margin-top: 20px;
-        }
-
-        .content-item {
-            flex-basis: 40%;
-            max-width: 300px;
-            background-color: #f4f4f4;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .content-item:hover {
-            background-color: #ebebeb;
-        }
-
-        .content-title {
-            font-weight: bold;
-            color: #333333;
-            margin-bottom: 10px;
-        }
-
-        .content-text {
-            color: #555555;
-        }
-    </style>
+    <link rel="stylesheet" href="../static/css/menu_accueil.css">
+   
 </head>
-<body>
-    <div class="dashboard">
-        <div class="menu scan-menu">
-            <div class="menu-icon" style="background: white;">
-                <i class="fas fa-home"></i>
-            </div>
-            <div class="menu-title">Accueil</div>
-        </div>
-        <div class="menu scan-menu">
-            <div class="menu-icon" style="background: white;">
-                <i class="fas fa-qrcode"></i>
-            </div>
-            <div class="menu-title">Scanner</div>
-        </div>
-       
-        <div class="menu notification-menu" >
-            <div class="menu-icon" style="background: white;">
-                <i class="fas fa-bell"></i>
-            </div>
-            <div class="menu-title">Notifications</div>
+ <html>
+    <body>
+      <div class="container">
+    
+        <div class="menu">
+          <ul>
+            <li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="#">Transport</a></li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+          </ul>
         </div>
         
-        <button class="logout-button">Déconnexion</button>
-    </div></a>
+        <div class="content">
+          <h2>Bienvenue sur notre site de transport ! Nous sommes ravis de vous accueillir et de vous accompagner dans tous vos déplacements.</h2>
+        </div>
+        
+        <div class="buttons"  >
+          <button><a style="text-decoration: none; color: white;" href="">Inscription</a> </button>
+          <button><a style="text-decoration: none; color: white;" href="">Connexion</a></button>
+        </div>
+      </div>
+    </body>
+    </html>
 
-    <div class="content">
-        <div class="content-item">
-            <h2 class="content-title">Contenu 1</h2>
-            <p class="content-text">Ceci est le contenu de la première div.</p>
+    <div class="content" style="text-align: center;">
+        <a href="../templates/depot_dossier.html"><div class="content-item">
+            <h2 class="content-title">Conducteur</h2>
+            <p class="content-text">Vous êtes en quête d'un conducteur experimenté pour votre vehicule?Et bien vous êtes au bon endroit</p>
+        </div></a>
+        <a href="../templates/depot_dossier.html"><div class="content-item">
+            <h2 class="content-title" >Mecanicien</h2>
+            <p class="content-text">Vous avez une panne concernant votre vehicule? c'est le momennt de faire appel à un experimenté d'ici</p>
+        </div></a>
+        <a href="../templates/depot_dossier.html"><div class="content-item">
+            <h2 class="content-title">Demande de course</h2>
+            <p class="content-text">Ici vous avez à votre disposition des vehicules et conducteur pour vos course</p>
+        </div></a>
+        <a href="../templates/depot_dossier.html"><div class="content-item">
+            <h2 class="content-title">Dépot de dossier</h2>
+            <p class="content-text">Etes vous en quête d'emploi dans le domaine du transport: dépose tes dossiers ici</p>
+        </div></a>
+         
+
+
+    <!-- slice -->
+
+        <div class="slider">
+            <img class="slide" src="../static/img/chauffeur-accompagnateur.jpeg" alt="Image 1">
+            <img class="slide" src="../static/img/Depot-dossier-facilite__-coronavirus.jpeg" alt="Image 2">
+            <img class="slide" src="../static/img/livreur.jpeg" alt="Image 3">
+            <img class="slide" src="../static/img/mecanicien.jpeg" alt="Image 4">
+            <img class="slide" src="../static/img/voitures.jpeg" alt="Image 5">
+            <img class="slide" src="../static/img/livreur_moto.jpeg" alt="Image 6">
+            <img class="slide" src="../static/img/chauffeur-accompagnateur.jpeg" alt="Image 1">
         </div>
-        <div class="content-item">
-            <h2 class="content-title">Contenu 2</h2>
-            <p class="content-text">Ceci est le contenu de la deuxième div.</p>
-        </div>
-        <div class="content-item">
-            <h2 class="content-title">Contenu 3</h2>
-            <p class="content-text">Ceci est le contenu de la troisième div.</p>
-        </div>
+
     </div>
 
-   
+  
 
+    <!-- footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
+<footer>
+    <div class="div_foot">
+      <div class="footer-contact">
+        <h3 class="h3_foot">Contact:0759152201</h3>
+        <p class="p_foot">Adresse:Angré gestoci, Abidjan Côte d'ivoire</p>
+        <p class="p_foot">Téléphone:0585825774</p>
+        <p class="p_foot">Email:transport@gmail.com</p>
+      </div>
+      <div class="footer-menu">
+        <h3 class="h3_foot">Menu</h3>
+        <ul class="foot_ul">
+          <li class="foot_li"><a class="a_foot" href="#">Accueil</a></li>
+          <li class="foot_li"><a class="a_foot" href="#">À propos</a></li>
+          <li class="foot_li"><a class="a_foot" href="#">conducteur</a></li>
+          <li class="foot_li"><a class="a_foot" href="#">Demande de course</a></li>
+          <li class="foot_li"><a class="a_foot" href="#">Dépot de dossier</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3 class="h3_foot">Recevoir les actualités</h3>
+        <p class="p_foot">Inscrivez-vous à notre site pour recevoir les dernières mises à jour.</p>
+        <form>
+          <input class="foot_input" type="email" placeholder="Votre adresse e-mail" required>
+          <button class="foot_button" type="submit">S'inscrire</button>
+        </form>
+      </div>
+      <div class="footer-social">
+        <h3 class="h3_foot">Suivez-nous</h3>
+        <ul class="foot_ul">
+          <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-facebook"></i></a></li>
+          <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-instagram"></i></a></li>
+          <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="p_foot">&copy; 2023 Crypto_change. Tous droits réservés.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <ul class="foot_ul">
+          <li class="foot_li"><a class="a_foot" href="#">Termes et conditions</a></li>
+          <li class="foot_li"><a class="a_foot" href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </html>

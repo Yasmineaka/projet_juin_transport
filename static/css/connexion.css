@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #3b759b;
+    background-color:rgb(212, 212, 237);
   }
   
   .container form {
@@ -15,7 +15,7 @@
   
   h2 {
     text-align: center;
-    color: #3498db;
+    color: rgb(198, 198, 239);
   }
   
   .form-group {
@@ -24,7 +24,7 @@
   
   label {
     display: block;
-    color: #3498db;
+    color: rgb(182, 182, 239);
   }
   
   input[type="email"],
@@ -43,7 +43,7 @@
   input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #2980b9;
+    background-color: rgb(159, 159, 241);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -51,6 +51,6 @@
   }
   
   input[type="submit"]:hover {
-    background-color: #1a5276;
+    background-color: rgb(212, 212, 237);
   }
   
