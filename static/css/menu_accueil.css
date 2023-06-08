@@ -203,7 +203,7 @@ margin-right: 0;
 
 .slider {
   position: relative;
-  width: 70%;
+  width: 60%;
   height: 300px;
   overflow: hidden;
   margin: 0 auto; /* Centre la div horizontalement */
@@ -217,6 +217,7 @@ margin-right: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
+  background-size: cover;
   transition: opacity 1s ease-in-out;
 }
 

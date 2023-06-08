@@ -12,7 +12,7 @@ body {
 
   .tab {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: rgb(182, 182, 239);
   }
 
   .tab button {
@@ -22,24 +22,25 @@ body {
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
+    border-radius: 15px 15px 0 0;
     transition: 0.3s;
     font-size: 16px;
     border-bottom: 2px solid transparent;
   }
 
   .tab button:hover {
-    background-color: #ddd;
+    background-color: white;
   }
 
   .tab button.active {
-    background-color: #ccc;
-    border-bottom: 2px solid #555;
+    background-color: white;
+    border-bottom: 2px solid rgb(130, 130, 248);
   }
 
   .tabcontent {
     display: none;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #c8c4c4;
     border-top: none;
   }
 
@@ -53,7 +54,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    background-color: #f7f7f7;
+    background-color: rgb(224, 224, 247);
   }
   
   .form-container h2 {
