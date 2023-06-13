@@ -23,7 +23,7 @@
     <hr>
     <div class="form-container">
       <h2>Formulaire de dépôt de dossier - Conducteur</h2>
-      <form action="{{url-for=depot_dossier()}}">
+      <form >
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
         
@@ -184,7 +184,7 @@
     <hr>
     <div class="form-container">
       <h3>Formulaire de recrutement - Mécanicien</h3>
-      <form action="{{ url_for('depot_dossier')}}" method="POST">
+      <form action="{{ url_for('depot_dossier') }}" method="POST">
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
         
