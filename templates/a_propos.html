@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos de Notre Entreprise de Transport</title>
+  <style>
+    /* Styles CSS pour la mise en page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f7f7f7;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: #333;
+      text-transform: uppercase;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    strong {
+      color: #555;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="path/to/your/logo.png" alt="Logo de l'entreprise de transport">
+  </div>
+
+  <h1 id="company-name"></h1>
+
+  <p id="company-description"></p>
+
+  <h2 style="color: #555;">Notre Mission</h2>
+  <p id="company-mission"></p>
+
+  <h2 style="color: #555;">Nos Services</h2>
+  <ul id="company-services"></ul>
+
+  <h2 style="color: #555;">Notre Équipe</h2>
+  <p id="company-team"></p>
+
+  <h2 style="color: #555;">Contactez-nous</h2>
+  <p>Pour toute demande d'information supplémentaire ou pour réserver nos services, n'hésitez pas à nous contacter. Nous sommes disponibles pour répondre à vos questions et vous aider dans vos besoins de transport.</p>
+  <p>Numéro de téléphone : <strong id="company-phone"></strong></p>
+  <p>Adresse e-mail : <strong id="company-email"></strong></p>
+
+  <script>
+    // Charger les données de l'entreprise à partir du fichier JSON
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('company-name').textContent = data.name;
+        document.getElementById('company-description').textContent = data.description;
+        document.getElementById('company-mission').textContent = data.mission;
+
+        const servicesList = document.getElementById('company-services');
+        data.services.forEach(service => {
+          const listItem = document.createElement('li');
+          listItem.textContent = service;
+          servicesList.appendChild(listItem);
+        });
+
+        document.getElementById('company-team').textContent = data.team;
+        document.getElementById('company-phone').textContent = data.phone;
+        document.getElementById('company-email').textContent = data.email;
+      })
+      .catch(error => {
+        console.error('Une erreur s\'est produite lors du chargement des données:', error);
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple de formulaires</title>
+  <style>
+    /* Styles CSS */
+    .menu-item {
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .form-container {
+      display: none;
+      margin-bottom: 20px;
+    }
+    .form-container.show {
+      display: block;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-container input[type="text"],
+    .form-container select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-container input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-item" onclick="showForm(1)">Menu 1</div>
+    <div class="menu-item" onclick="showForm(2)">Menu 2</div>
+    <div class="menu-item" onclick="showForm(3)">Menu 3</div>
+  </div>
+
+  <div class="form-container" id="form1">
+    <h2>Formulaire 1</h2>
+    <form>
+      <label for="name1">Nom:</label>
+      <input type="text" id="name1" name="name1" required>
+      
+      <label for="email1">Email:</label>
+      <input type="email" id="email1" name="email1" required>
+      
+      <input type="submit" value="Envoyer">
+    </form>
+  </div>
+
+  <div class="form-container" id="form2">
+    <h2>Formulaire 2</h2>
+    <form>
+      <label for="name2">Nom:</label>
+      <input type="text" id="name2" name="name2" required>
+      
+      <label for="email2">Email:</label>
+      <input type="email" id="email2" name="email2" required>
+      
+      <input type="submit" value="Envoyer">
+    </form>
+  </div>
+
+  <div class="form-container" id="form3">
+    <h2>Formulaire 3</h2>
+    <form>
+      <label for="name3">Nom:</label>
+      <input type="text" id="name3" name="name3" required>
+      
+      <label for="email3">Email:</label>
+      <input type="email" id="email3" name="email3" required>
+      
+      <input type="submit" value="Envoyer">
+    </form>
+  </div>
+
+  <script>
+    // JavaScript pour afficher les formulaires sélectionnés
+    function showForm(formIndex) {
+      var formContainers = document.getElementsByClassName('form-container');
+      for (var i = 0; i < formContainers.length; i++) {
+        if (i === formIndex - 1) {
+          formContainers[i].classList.add('show');
+        } else {
+          formContainers[i].classList.remove('show');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

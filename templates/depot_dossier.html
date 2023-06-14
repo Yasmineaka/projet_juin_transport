@@ -24,6 +24,8 @@
     <div class="form-container">
       <h2>Formulaire de dépôt de dossier - Conducteur</h2>
       <form >
+        <div id="affichageInfos"></div>
+
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
         
@@ -234,3 +236,25 @@
   <script src="../static/js/depot_dossier.js"></script>
 </body>
 </html>
+
+  <script>
+  function afficherInfosConducteur(event) {
+    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+    // Récupérer les valeurs saisies dans les champs du formulaire
+    var nom = document.getElementById("nom").value;
+    var adresse = document.getElementById("adresse").value;
+    var telephone = document.getElementById("telephone").value;
+    // ...
+
+    // Construire le contenu HTML avec les informations saisies
+    var contenuHTML = "<h2>Informations du conducteur</h2>" +
+      "<p><strong>Nom :</strong> " + nom + "</p>" +
+      "<p><strong>Adresse :</strong> " + adresse + "</p>" +
+      "<p><strong>Téléphone :</strong> " + telephone + "</p>";
+    // ...
+
+    // Afficher le contenu HTML dans la section dédiée à l'affichage des informations
+    document.getElementById("affichageInfos").innerHTML = contenuHTML;
+  }
+</script>
