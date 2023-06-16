@@ -8,13 +8,14 @@
 </head>
  <html>
     <body>
+        <!--------------------------NAV--------------------------------->
       <div class="container">
     
         <div class="menu">
           <ul>
             <li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="#">YakaTransport</a></li>
             <li><a href="#">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
+            <li><a href="/aPropos">À propos</a></li>
           </ul>
         </div>
         
@@ -23,13 +24,15 @@
         </div>
         
         <div class="buttons"  >
-          <button><a style="text-decoration: none; color: white;" href="../templates/inscription.html">Inscription</a> </button>
-          <button><a style="text-decoration: none; color: white;" href="../templates/connexion.html">Connexion</a></button>
+          <button><a style="text-decoration: none; color: white;" href="{{url_for('inscription')}}">Inscription</a> </button>
+          <button><a style="text-decoration: none; color: white;" href="{{url_for('connexion')}}">Connexion</a></button>
         </div>
       </div>
-    </body>
-    </html>
+   
+  <!-------------------------- FIN  NAV--------------------------------->
 
+
+  
     <div class="content" style="text-align: center;">
         <a href="../templates/depot_dossier.html"><div class="content-item">
             <h2 class="content-title">Conducteur</h2>

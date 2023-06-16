@@ -7,23 +7,60 @@
 <body>
   <div class="container">
     <div class="logo-container">
-      <ul style="list-style: none;"><li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237); " href="../templates/menu_accueil.html">YakaTransport</a></li></ul>
+      <ul style="list-style: none;"><li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237); " href="/">YakaTransport</a></li></ul>
     </div>
     <hr>
     <div class="form-container">
       <h2>Connexion</h2>
-      <form>
+   {% with messages = get_flashed_messages() %}
+     {% if messages %}
+       <ul class="messages">
+         {% for message in messages %}
+           <li>{{ message }}</li>
+         {% endfor %}
+       </ul>
+     {% endif %}
+   {% endwith %}
+      <form action="{{ url_for('connexion') }}" method="POST">
         <div class="form-group">
           <label for="password">Mot de passe:</label>
-          <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+          <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
         </div>
         <input type="submit" value="Se connecter">
       </form>
-      <p class="lien_inscription">Vous n'avez pas de compte ? <a href="../templates/inscription.html">Inscrivez-vous</a></p>
+      <p class="lien_inscription">Vous n'avez pas de compte ? <a href="{{url_for('inscription')}}">Inscrivez-vous</a></p>
     </div>
   </div>
 </body>
-</html>
+</html> 
+ 
 
 
 
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Formulaire de Connexion</title>
+</head>
+<body>
+  <h2>Connexion</h2>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form action="{{ url_for('connexion') }}" method="POST">
+    <div>
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+      <input type="submit" value="Se connecter">
+    </div>
+  </form>
+</body>
+</html> -->

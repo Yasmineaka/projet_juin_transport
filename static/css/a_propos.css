@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: rgb(129, 129, 241);
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .section {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .img1 {
+    width: 30%;
+    height: 300px;
+  }
+
+  .img2 {
+    width: 30%;
+    height: 300px;
+  }
+
+  .section-content {
+    display: flex;
+  }
+
+  .section-content .image-container {
+    flex: 1;
+  }
+
+  .section-content .image-container img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-left: 100px;
+    border: 3px solid rgb(129, 129, 241);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-content .text-container {
+    flex: 1;
+    padding-left: 30px;
+  }
+
+.team-member{
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 18%;
+}
+
+
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(129, 129, 241);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-member h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+  }
+
+  .team-member p {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .section ul {
+    margin-top: 10px;
+    padding-left: 2%;
+    
+  }
+
+  .section ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .div_val_serv{
+    display: inline-block;
+    margin: 100px;
+    margin-left: 23%;
+  }
+
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .dashboard {
+      padding: 10px;
+    }
+  
+    .menu {
+      flex-basis: 45%;
+    }
+  
+    .section {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+
+
+ 

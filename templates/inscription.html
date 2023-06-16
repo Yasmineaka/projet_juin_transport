@@ -7,21 +7,39 @@
 <body>
   <div class="container">
     <div class="logo-container">
-      <ul style="list-style: none;"><li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237); " href="../templates/menu_accueil.html">YakaTransport</a></li></ul>
+      <ul style="list-style: none;"><li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237); " href="/">YakaTransport</a></li></ul>
     </div>
     <hr>
     <div class="form-container">
       <h2>Inscription</h2>
-      <form>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <form action="{{ url_for('inscription') }}" method="POST">
+
         <div class="form-group">
-          <label for="email">Email\Numéro de téléphone:</label>
-          <input type="email" id="email\telephone" placeholder="Entrez votre email" required>
+          <label for="name">Nom:</label>
+          <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
         </div>
+
+        <div class="form-group">
+          <label for="email">Téléphone:</label>
+          <input type="phone" id="phone" name="phone" placeholder="Entrez votre numero de telephone" required>
+        </div>
+
         <div class="form-group">
           <label for="password">Mot de passe:</label>
-          <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+          <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
         </div>
+
         <input type="submit" value="S'inscrire">
+        <a href="{{url_for('connexion')}}" class="btn btn-primary btn-block">Connexion</a>
       </form>
      
     </div>
@@ -31,3 +49,39 @@
 
 
 
+ <!-- <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Formulaire d'inscription</title>
+ </head>
+ <body>
+   <h2>Inscription</h2>
+   {% with messages = get_flashed_messages() %}
+     {% if messages %}
+       <ul class="messages">
+         {% for message in messages %}
+           <li>{{ message }}</li>
+         {% endfor %}
+       </ul>
+     {% endif %}
+   {% endwith %}
+   <form action="{{ url_for('inscription') }}" method="POST">
+     <div>
+       <label for="name">Nom :</label>
+       <input type="text" id="name" name="name" required>
+     </div>
+     <div>
+       <label for="email">Email :</label>
+       <input type="email" id="email" name="email" required>
+     </div>
+     <div>
+       <label for="password">Mot de passe :</label>
+       <input type="password" id="password" name="password" required>
+     </div>
+     <div>
+       <input type="submit" value="S'inscrire">
+     </div>
+   </form>
+ </body>
+ </html> -->
+ 

@@ -1,103 +1,164 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À Propos de Notre Entreprise de Transport</title>
-  <style>
-    /* Styles CSS pour la mise en page */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f7f7f7;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 36px;
-      color: #333;
-      text-transform: uppercase;
-    }
-    p {
-      margin-bottom: 20px;
-    }
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    strong {
-      color: #555;
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-width: 200px;
-      height: auto;
-    }
-    @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-      h1 {
-        font-size: 28px;
-      }
-    }
-  </style>
+  <title>À propos - Transport Express</title>
+  <link rel="stylesheet" href="../static/css/a_propos.css">
+  <link rel="stylesheet" href="../static/css/menu_accueil.css">
 </head>
 <body>
-  <div class="logo">
-    <img src="path/to/your/logo.png" alt="Logo de l'entreprise de transport">
+  <!--------------------------NAV--------------------------------->
+  <div class="container">
+    <div class="menu">
+      <ul>
+        <li><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="#">YakaTransport</a></li>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="/aPropos">À propos</a></li>
+      </ul>
+    </div>
   </div>
+  <!--------------------------FIN NAV--------------------------------->
+  <main>
 
-  <h1 id="company-name"></h1>
+    <section class="section">
+      <h1>Nos Services de Transport</h1>
+      <h4>Nous proposons une gamme complète de services de transport pour répondre à vos besoins . Que vous ayez besoin de livrer des marchandises à travers le pays ou d'organiser des transports internationaux, notre équipe expérimentée est là pour vous accompagner:transport de marchandises générales,mecanicien en tout lieu,chauffeur pour votre conduite,ransport de colis,Service de suivi en temps réel</h4>
+      <p></p>
+    </section>
 
-  <p id="company-description"></p>
 
-  <h2 style="color: #555;">Notre Mission</h2>
-  <p id="company-mission"></p>
+    <div class="section-content">
+      <section class="section">
+        <div class="image-container">
+          <img class="img1" src="../static/img/livreur.jpeg" alt="Service de livraison">
+        </div>
+        <div class="text-container">
+          <h2>Livraison Rapide et Fiable</h2>
+          <p>Nous offrons des services de livraison rapides et fiables pour répondre à vos besoins. Notre équipe expérimentée s'assure que vos colis arrivent à destination en toute sécurité et dans les délais impartis.</p>
+        </div>
+      </section>
 
-  <h2 style="color: #555;">Nos Services</h2>
-  <ul id="company-services"></ul>
+      <section class="section">
+        <div class="image-container">
+          <img class="img2" src="../static/img/signature_document.jpeg" alt="Service VTC">
+        </div>
+        <div class="text-container">
+          <h2>VTC de Luxe</h2>
+          <p>Nos chauffeurs VTC professionnels vous garantissent un service de transport de luxe. Que vous ayez besoin d'une course en ville ou d'un transfert vers l'aéroport, nous sommes là pour vous offrir une expérience confortable et agréable.</p>
+        </div>
+      </section>
 
-  <h2 style="color: #555;">Notre Équipe</h2>
-  <p id="company-team"></p>
+      <section class="section">
+        <div class="image-container">
+          <img class="img2" src="../static/img/depot_dossier.jpeg" alt="Service VTC">
+        </div>
+        <div class="text-container">
+          <h2>Demande d'emploi conducteur</h2>
+          <p>Nos chauffeurs VTC professionnels vous garantissent un service de transport de luxe. Que vous ayez besoin d'une course en ville ou d'un transfert vers l'aéroport, nous sommes là pour vous offrir une expérience confortable et agréable.</p>
+        </div>
+      </section>
 
-  <h2 style="color: #555;">Contactez-nous</h2>
-  <p>Pour toute demande d'information supplémentaire ou pour réserver nos services, n'hésitez pas à nous contacter. Nous sommes disponibles pour répondre à vos questions et vous aider dans vos besoins de transport.</p>
-  <p>Numéro de téléphone : <strong id="company-phone"></strong></p>
-  <p>Adresse e-mail : <strong id="company-email"></strong></p>
+      <section class="section">
+        <div class="image-container">
+          <img class="img2" src="../static/img/signature_document.jpeg" alt="Service VTC">
+        </div>
+        <div class="text-container">
+          <h2>Demande d'inscription mécanicien</h2>
+          <p>Nos chauffeurs VTC professionnels vous garantissent un service de transport de luxe. Que vous ayez besoin d'une course en ville ou d'un transfert vers l'aéroport, nous sommes là pour vous offrir une expérience confortable et agréable.</p>
+        </div>
+      </section>
+    </div>
 
-  <script>
-    // Charger les données de l'entreprise à partir du fichier JSON
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('company-name').textContent = data.name;
-        document.getElementById('company-description').textContent = data.description;
-        document.getElementById('company-mission').textContent = data.mission;
+    <section class="section">
+      <h1>Notre Équipe</h1>
+      <div class="team-member">
+        <img src="../static/img/voitures.jpeg" alt="Membre de l'équipe">
+        <h4>John Doe</h4>
+        <p>Directeur des opérations</p>
+      </div>
+      <div class="team-member">
+        <img src="../static/img/depot_dossier.jpeg" alt="Membre de l'équipe">
+        <h4>Aka Aménan Yasmine</h4>
+        <p>DG de l'entréprise</p>
+      </div>
+      <div class="team-member">
+        <img src="../static/img/livreur_moto.jpeg" alt="Membre de l'équipe">
+        <h4>Robert Johnson</h4>
+        <p>Chauffeur VTC</p>
+      </div>
+    </section>
 
-        const servicesList = document.getElementById('company-services');
-        data.services.forEach(service => {
-          const listItem = document.createElement('li');
-          listItem.textContent = service;
-          servicesList.appendChild(listItem);
-        });
+    <section class="section">
+      <h1>Valeur et service</h1>
+      <div class="div_val_serv">
+        <h2>Nos Valeurs</h2>
+          <ul>
+            <li>Engagement envers la satisfaction client</li>
+            <li>Efficacité et ponctualité</li>
+            <li>Respect de l'environnement</li>
+            <li>Sécurité et fiabilité</li>
+            <li>Équipe compétente et professionnelle</li>
+          </ul>
+      </div>
 
-        document.getElementById('company-team').textContent = data.team;
-        document.getElementById('company-phone').textContent = data.phone;
-        document.getElementById('company-email').textContent = data.email;
-      })
-      .catch(error => {
-        console.error('Une erreur s\'est produite lors du chargement des données:', error);
-      });
-  </script>
+      <div class="div_val_serv">
+        <h2>Nos Services</h2>
+        <ul>
+          <li>Livraison express nationale et internationale</li>
+          <li>Transport de marchandises dangereuses</li>
+          <li>Service VTC pour les particuliers et les entreprises</li>
+          <li>Transport de colis et de palettes</li>
+          <li>Service de suivi en temps réel</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
+<footer>
+  <div class="div_foot">
+    <div class="footer-contact">
+      <h3 class="h3_foot">Contact:0759152201</h3>
+      <p class="p_foot">Adresse:Angré gestoci, Abidjan Côte d'ivoire</p>
+      <p class="p_foot">Téléphone:0585825774</p>
+      <p class="p_foot">Email:transport@gmail.com</p>
+    </div>
+    <div class="footer-menu">
+      <h3 class="h3_foot">Menu</h3>
+      <ul class="foot_ul">
+        <li class="foot_li"><a class="a_foot" href="#">Accueil</a></li>
+        <li class="foot_li"><a class="a_foot" href="#">À propos</a></li>
+        <li class="foot_li"><a class="a_foot" href="#">conducteur</a></li>
+        <li class="foot_li"><a class="a_foot" href="#">Demande de course</a></li>
+        <li class="foot_li"><a class="a_foot" href="#">Dépot de dossier</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h3 class="h3_foot">Recevoir les actualités</h3>
+      <p class="p_foot">Inscrivez-vous à notre site pour recevoir les dernières mises à jour.</p>
+      <form>
+        <input class="foot_input" type="email" placeholder="Votre adresse e-mail" required>
+        <button class="foot_button" type="submit">S'inscrire</button>
+      </form>
+    </div>
+    <div class="footer-social">
+      <h3 class="h3_foot">Suivez-nous</h3>
+      <ul class="foot_ul">
+        <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-instagram"></i></a></li>
+        <li class="foot_li"><a class="a_foot" href="#"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <p class="p_foot">&copy; 2023 Crypto_change. Tous droits réservés.</p>
+    </div>
+    <div class="footer-bottom-right">
+      <ul class="foot_ul">
+        <li class="foot_li"><a class="a_foot" href="#">Termes et conditions</a></li>
+        <li class="foot_li"><a class="a_foot" href="#">Politique de confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
