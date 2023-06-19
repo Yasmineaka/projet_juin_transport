@@ -23,7 +23,7 @@
     <hr>
     <div class="form-container">
       <h2>Formulaire de dépôt de dossier - Conducteur</h2>
-      <form >
+      <form action="/process_conducteur" method="POST" enctype="multipart/form-data">
         <div id="affichageInfos"></div>
 
         <label for="nom">Nom complet :</label>
@@ -82,7 +82,7 @@
     <hr>
     <div class="form-container">
       <h2>Formulaire de dépôt de dossier - Moto</h2>
-      <form method="POST" action="traitement_formulaire.php">
+      <form action="/process_moto" method="POST">
         <label for="nomMoto">Nom complet :</label>
         <input type="text" id="nomMoto" name="nomMoto" required>
 
@@ -133,7 +133,7 @@
    <hr>
     <div class="form-container">
       <h2>Formulaire de recrutement - Chauffeur VTC</h2>
-      <form action="/process_recruitment_form" method="POST">
+      <form action="/process_chauffeur_vtc" method="POST"  enctype="multipart/form-data">
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
         
@@ -147,7 +147,7 @@
         <input type="email" id="email" name="email" required>
         
         <label for="dateNaissance">Date de naissance :</label>
-        <input type="date" id="dateNaissance" name="dateNaissance" required>
+        <input type="date" id="date_naissance" name="date_naissance" required>
         
         <label for="experience">Expérience en tant que chauffeur :</label>
         <textarea id="experience" name="experience" required></textarea>
@@ -186,7 +186,7 @@
     <hr>
     <div class="form-container">
       <h3>Formulaire de recrutement - Mécanicien</h3>
-      <form action="{{ url_for('depot_dossier') }}" method="POST">
+      <form action="/process_mecanicien" method="POST" enctype="multipart/form-data">
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
         
