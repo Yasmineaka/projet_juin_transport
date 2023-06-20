@@ -88,7 +88,7 @@ def inscription():
         conn.commit()
         conn.close()
 
-        flash("Inscription réussie. Vous pouvez maintenant vous connecter.")
+        flash("Inscription réussie. Vous pouvez maintenant vous connecter.", 'succes')
         backup_database()  # Effectuer la sauvegarde de la base de données
         return redirect(url_for('connexion'))
 
@@ -414,3 +414,10 @@ def process_mecanicien():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+
+

@@ -6,12 +6,13 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f3f3f3;
 }
-  li{
+  ul a{
   font-size: 30px;
   margin-left: -12%;
+  list-style: none;
  }
 .container {
-  background-color:rgb(212, 212, 237);
+  background: linear-gradient(#ffffff, #9198e5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +29,11 @@ body {
   height: auto;
 }
 
-.container form {
+/* .container form {
     width: 300px;
     padding: 20px;
     background-color: #fff;
-  }
+  } */
 .form-container {
   
   width: 300px;
@@ -56,6 +57,7 @@ label {
   display: block;
   color: #666;
   font-weight: 700;
+  margin-left: 5%;
 }
 
 input[type="text"],
@@ -64,6 +66,7 @@ input[type="password"] {
   width: 80%;
   padding: 10px;
   border: 1px solid #cdcccc;
+  margin-left: 5%;
   border-radius: 5px;
 }
 
@@ -79,7 +82,7 @@ input[type="submit"] {
   background-color: #4caf50;
   color: #fff;
   border: none;
-  margin-left: 20%;
+  margin-left: 24%;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -110,7 +113,11 @@ a{
 }
 p{
   text-align: center;
-  margin-left: -10%;
 }
-  
- 
+li{
+  font-size: 10px;
+  list-style: none;
+  color: red;
+  text-align: center;
+  margin-left: -15%;
+}

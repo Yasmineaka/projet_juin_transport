@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <div id="message"></div>
+
+    <form id="myForm" method="POST" enctype="multipart/form-data">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" required><br>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="text" id="telephone" name="telephone" required><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="dateNaissance">Date de naissance :</label>
+        <input type="date" id="dateNaissance" name="dateNaissance" required><br>
+
+        <label for="categoriePermis">Catégorie de permis :</label>
+        <input type="text" id="categoriePermis" name="categoriePermis" required><br>
+
+        <label for="dateObtentionPermis">Date d'obtention du permis :</label>
+        <input type="date" id="dateObtentionPermis" name="dateObtentionPermis" required><br>
+
+        <label for="paysEmissionPermis">Pays d'émission du permis :</label>
+        <input type="text" id="paysEmissionPermis" name="paysEmissionPermis" required><br>
+
+        <label for="responsabilites">Responsabilités :</label>
+        <textarea id="responsabilites" name="responsabilites" required></textarea><br>
+
+        <label for="motivation">Motivation :</label>
+        <textarea id="motivation" name="motivation" required></textarea><br>
+
+        <label for="cv">CV :</label>
+        <input type="file" id="cv" name="cv" required><br>
+        <div id="cvPreview"></div>
+
+        <label for="photoIdentite">Photo d'identité :</label>
+        <input type="file" id="photoIdentite" name="photoIdentite" required><br>
+        <div id="photoIdentitePreview"></div>
+
+        <label for="copiePermis">Copie du permis de conduire :</label>
+        <input type="file" id="copiePermis" name="copiePermis" required><br>
+        <div id="copiePermisPreview"></div>
+
+        <input type="submit" value="Envoyer">
+    </form>
+
+    <script>
+        // JavaScript code for form handling goes here...
+    </script>
+</body>
+</html>

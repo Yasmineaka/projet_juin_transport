@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+
+    <form id="myForm">
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div>
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
+        </div>
+        <div>
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="dateNaissance">Date de naissance :</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+        </div>
+        <div>
+            <label for="categoriePermis">Catégorie de permis :</label>
+            <select id="categoriePermis" name="categoriePermis" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        </div>
+        <div>
+            <label for="dateObtentionPermis">Date d'obtention du permis :</label>
+            <input type="date" id="dateObtentionPermis" name="dateObtentionPermis" required>
+        </div>
+        <div>
+            <label for="paysEmissionPermis">Pays d'émission du permis :</label>
+            <input type="text" id="paysEmissionPermis" name="paysEmissionPermis" required>
+        </div>
+        <div>
+            <label for="responsabilites">Responsabilités :</label>
+            <textarea id="responsabilites" name="responsabilites" required></textarea>
+        </div>
+        <div>
+            <label for="motivation">Motivation :</label>
+            <textarea id="motivation" name="motivation" required></textarea>
+        </div>
+        <div>
+            <label for="cv">CV :</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+            <div id="cvPreview"></div>
+        </div>
+        <div>
+            <label for="photoIdentite">Photo d'identité :</label>
+            <input type="file" id="photoIdentite" name="photoIdentite" accept="image/*" required>
+            <div id="photoIdentitePreview"></div>
+        </div>
+        <div>
+            <label for="copiePermis">Copie du permis de conduire :</label>
+            <input type="file" id="copiePermis" name="copiePermis" accept=".pdf,.jpg,.jpeg,.png" required>
+            <div id="copiePermisPreview"></div>
+        </div>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        // JavaScript code for form submission and handling file previews goes here...
+    </script>
+</body>
+</html>
