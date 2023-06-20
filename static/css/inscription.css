@@ -104,7 +104,13 @@ input[type="submit"]:hover {
   color: rgb(129, 129, 241);
 }
   
-  
-  
+a{
+  color: rgb(129, 129, 241);
+  text-decoration: none;
+}
+p{
+  text-align: center;
+  margin-left: -10%;
+}
   
  
