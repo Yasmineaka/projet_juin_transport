@@ -2,7 +2,7 @@ from werkzeug.utils import secure_filename
 
 
 import sqlite3
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template , flash
 import os
 # -----------------------------------------------FORMULAIRE DE RECUPERATION DES DONNÉES DE CONNECTION ET INSCRIPTION-----------------------------------------------------------------------
 
@@ -136,6 +136,54 @@ if __name__ == '__main__':
 
 
 
+
+# -----------------------------------------------ROUTE DEMENDE DE LIVREUR-----------------------------------------------------------------------
+@app.route('/livraison')
+def livraison():
+    return render_template('demande_livraison.html')
+
+                            #----------------------ROUTE ADMIN-------------------------
+
+@app.route('/login', methods=['POST','GET'])
+def login():
+    if request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+
+        if username == 'yaka' and password == '1234':
+            # Authentification réussie, rediriger vers la page de succès
+            flash('Authentification réussie!', 'success')
+            return redirect(url_for('admin'))
+        else:
+            # Authentification échouée, afficher une erreur sur la page de connexion
+            flash('Nom d\'utilisateur ou mot de passe incorrect.', 'error')
+            return redirect(url_for('login'))
+    return render_template('admin_connexion.html')   
+                   
+                            #----------------------ROUTE ADMIN-------------------------
+@app.route('/admin') 
+def admin():
+    return render_template('admin.html')   
+
+
+
+
+
+
+
+                            #----------------------ROUTE ADMIN LIVRAISON-------------------------
+@app.route('/admin_livraison')
+def admin_livraison():
+    return render_template('admin_livraison.html')
+
+# -----------------------------------------------ROUTE DEMENDE DE MECANICIEN-----------------------------------------------------------------------
+
+
+
+
+
+
+# -----------------------------------------------ROUTE RECHERCHE DE CHAUFFEUR-----------------------------------------------------------------------
 
 
 

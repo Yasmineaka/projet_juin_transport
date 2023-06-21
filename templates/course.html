@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boutons rectangles</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .button {
+      width: 20%;
+      height: 200px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 8px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .button-primary {
+      background-color: #337ab7;
+    }
+
+    .button-primary:hover {
+      background-color: #286090;
+    }
+
+    .button-danger {
+      background-color: #d9534f;
+    }
+
+    .button-danger:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button">Livraison</button>
+  </div>
+</body>
+</html>

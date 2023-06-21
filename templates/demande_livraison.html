@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/demande_livraison.css">
+    <title>Demande de livreur</title>
+</head>
+<html>
+<body> 
+   
+    <section> 
+        <div>
+            <li style="list-style: none;"><a  style="margin: 10px; padding: 4px; top: 12px; position: relative; color: rgb(21, 21, 100);font-size: 20px; border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="/menu_accueil">YakaTransport</a></li> 
+        </div>      
+                <form action="">
+                    <div class="ligne">
+                        <div class="div_label_input">
+                            <label for="Contact">Date de collecte</label>
+                            <input type="datetime-local" name="date" id="date" required>
+                        </div>
+                        
+                        <div class="div_label_input">
+                            <label for="name">Numero de ramassage</label>
+                            <input type="tel" name="num_ramassage" id="num_ramassage" placeholder="contact"  required>
+                        </div>
+                
+                        <div class="div_label_input">
+                            <label for="name">Lieu de ramassage</label>
+                            <input type="text" name="lieux_ramassage" id="lieux_ramassage" placeholder="Entrez le prenom" required>
+                        </div>
+                
+                        <div class="div_label_input">
+                            <label for="name">Numero du beneficiaire</label>
+                            <input type="tel" name="num_livraison" id="num_livraison" placeholder="Contact" required>
+                        </div>
+                
+                        <div class="div_label_input">
+                            <label for="name">Commune du beneficiaire</label>
+                            <input type="" name="commune_liv" id="commune_liv" placeholder="Entrez la commune de livraison" required>
+                        </div>
+                
+                
+                        <div class="div_label_input">
+                            <label for="Contact">Prix comprenant frais de livraison</label>
+                            <input type="number"  value="maximum=1000" name="montant" id="montant" placeholder="Entrez le montant"  required>
+                        </div>
+                       
+                        <div class="div_label_input">
+                            <label for="Contact">Contact du depot après livraison:</label>
+                            <input type="tel" name="contact_depot" id="contact_depot" placeholder="07 59 15 22 01 : wave"  required>
+                        </div>
+                
+                        <div class="div_button">
+                            <button class="button5" id="Update"
+                            onclick="addData()">
+                                Ajouter 
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <hr> 
+                <div class="div_rh1">
+                    <div class="div_rh2">
+                        <table class="tableau" id="crudTable">
+                            <thead >
+                                <tr>
+                                    <th>Date de collecte</th>
+                                    <th>Numero de ramassage</th>
+                                    <th>Lieu de ramassage</th>
+                                    <th>Numero du beneficiaire</th>
+                                    <th>Commune du beneficiaire</th>
+                                    <th>Montant:</th>
+                                    <th>Contact du dépot:</th>
+                                </tr>  
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>           
+    </section>
+
+    <script src="../static/js/demande_livraison.js"></script>
+
+</body>
+</html>

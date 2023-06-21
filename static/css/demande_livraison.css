@@ -1,0 +1,86 @@
+
+body{
+   
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#ffffff, #9198e5);
+}
+
+table button{
+    background: #9198e5;
+    margin: 2px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid;
+} 
+
+.ligne{
+    position: relative;
+    border: 1px solid ;
+    box-shadow: 0px 1px 0px 0px;
+    width: 450px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    left: 35%;
+    border-radius: 10px ;
+    height:auto;
+    background: white;
+}
+
+label{
+  font-size: 15px;
+  margin-left: 10%;
+} 
+.div_label_input{
+    margin-top: 15px;
+}
+input{
+    width: 330px;
+    height: 35px;
+    font-size: 16px;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.button5{
+    position: relative;
+    height: 30px;
+    width: 70px;
+    border: 1px solid white;
+    background: rgb(37, 146, 37);
+    border-radius: 10px;
+    /* margin-left: 30%; */
+    color: white;
+    margin: 20px;
+    left: 35%;
+}
+
+
+td{
+    border: 1px solid ;
+    height: 50px;
+    text-align: center;
+    font-size: 17px;
+   background: white;   
+}
+
+th {
+    background: white;
+    color: rgb(66, 63, 63);
+    border:1px solid; 
+    font-size: 20px;
+        
+} 
+
+
+table{
+    position: relative;
+    border: 1px solid rebeccapurple;
+    width: 70%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    left: 15%;
+   }
+::placeholder{
+    font-size: 15px;
+}
