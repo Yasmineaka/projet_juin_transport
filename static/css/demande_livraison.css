@@ -1,9 +1,7 @@
 
 body{
-   
     margin: 0;
     padding: 0;
-    background: linear-gradient(#ffffff, #9198e5);
 }
 
 table button{
@@ -16,11 +14,10 @@ table button{
 
 .ligne{
     position: relative;
-    border: 1px solid ;
-    box-shadow: 0px 1px 0px 0px;
+    border: 0.1px solid ;
     width: 450px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    left: 35%;
+    left: 39%;
     border-radius: 10px ;
     height:auto;
     background: white;
@@ -39,16 +36,16 @@ input{
     font-size: 16px;
     margin-left: 10%;
     border-radius: 5px;
-    border: 1px solid;
+    border: 0.2px solid;
 }
 
 .button5{
     position: relative;
     height: 30px;
-    width: 70px;
+    width: 80px;
     border: 1px solid white;
-    background: rgb(37, 146, 37);
-    border-radius: 10px;
+    background: #9198e5;
+    border-radius: 7px;
     /* margin-left: 30%; */
     color: white;
     margin: 20px;

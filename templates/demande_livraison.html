@@ -8,21 +8,27 @@
     <title>Demande de livreur</title>
 </head>
 <html>
-<body> 
+<body style="background: #9aa1f322;"> 
    
     <section> 
+       
         <div>
-            <li style="list-style: none;"><a  style="margin: 10px; padding: 4px; top: 12px; position: relative; color: rgb(21, 21, 100);font-size: 20px; border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="/menu_accueil">YakaTransport</a></li> 
+            <li style="list-style: none;"><a  style="margin: 8px; text-decoration: none; padding: 4px; top: 12px; position: relative; color: rgb(21, 21, 100);font-size: 20px; border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="/menu_accueil">YakaTransport</a></li> 
         </div>      
-                <form action="">
+       
+                <form action="/livraison">
+                   <br>
+                    <p style="color: #737ef5; text-align: center;" > Veillez faire vos demandes de livreur la veille pour une meilleur prise en charge</p>
+                    <p style="color: #737ef5; text-align: center;"> Les colis enregistrés pour une livraison le jour J sont considérés comme des livraisons express et sont facturés au double des tarifs initiaux.</p>
+                    <p style="color: #737ef5; text-align: center;">Tarif: <br> livraison express:3000f <br> livraison standard:1500f</p>
                     <div class="ligne">
                         <div class="div_label_input">
-                            <label for="Contact">Date de collecte</label>
+                            <label for="date">Date de collecte</label>
                             <input type="datetime-local" name="date" id="date" required>
                         </div>
                         
                         <div class="div_label_input">
-                            <label for="name">Numero de ramassage</label>
+                            <label for="tel">Numero de ramassage</label>
                             <input type="tel" name="num_ramassage" id="num_ramassage" placeholder="contact"  required>
                         </div>
                 
@@ -60,7 +66,7 @@
                         </div>
                     </div>
                 </form>
-                <hr> 
+                <!-- <hr> 
                 <div class="div_rh1">
                     <div class="div_rh2">
                         <table class="tableau" id="crudTable">
@@ -79,7 +85,7 @@
                             </tbody>
                         </table>
                     </div>
-                </div>           
+                </div>            -->
     </section>
 
     <script src="../static/js/demande_livraison.js"></script>

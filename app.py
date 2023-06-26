@@ -51,6 +51,11 @@ create_table()
 def home():
     return render_template("menu_accueil.html")
 
+#----------------------------ROUTE ACCUEIL AVANT CONNEXION------------------------------------------
+@app.route('/accueil')
+def accueil():
+    return render_template("accueil.html")
+
 
 #----------------------------ROUTE INSCRIPTION------------------------------------------
 @app.route('/inscription', methods=['GET', 'POST'])
@@ -128,38 +133,37 @@ def aPropos():
     return render_template('a_propos.html')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
 # -----------------------------------------------FIN-----------------------------------------------------------------------
 
 
+              #----------------------ROUTE ADMIN-------------------------
 
+admins = {
+    'yaka': '1234',
+    'yasmine': '0000'
+}
 
-
-# -----------------------------------------------ROUTE DEMENDE DE LIVREUR-----------------------------------------------------------------------
-@app.route('/livraison')
-def livraison():
-    return render_template('demande_livraison.html')
-
-                            #----------------------ROUTE ADMIN-------------------------
-
+#---- ADMIN 1---
 @app.route('/login', methods=['POST','GET'])
 def login():
     if request.method == "POST":
         username = request.form['username']
         password = request.form['password']
 
-        if username == 'yaka' and password == '1234':
+        if username in admins and password == admins[username] and 'username' in session:
             # Authentification réussie, rediriger vers la page de succès
+            session['username'] = username
             flash('Authentification réussie!', 'success')
             return redirect(url_for('admin'))
+      
         else:
             # Authentification échouée, afficher une erreur sur la page de connexion
             flash('Nom d\'utilisateur ou mot de passe incorrect.', 'error')
             return redirect(url_for('login'))
-    return render_template('admin_connexion.html')   
-                   
+    return render_template('admin_connexion.html')    
+
+
                             #----------------------ROUTE ADMIN-------------------------
 @app.route('/admin') 
 def admin():
@@ -183,7 +187,7 @@ def admin_livraison():
 
 
 
-# -----------------------------------------------ROUTE RECHERCHE DE CHAUFFEUR-----------------------------------------------------------------------
+# -----------------------------------------------TABLE DES DIFFEREND FORMULAIRES-----------------------------------------------------------------------
 
 
 
@@ -268,9 +272,39 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS mecanicien
                    cv_filename BLOB,
                    photoIdentite_filename BLOB,
                    diplome_filename BLOB)''')
-
+#----------------------------------------TABLE DEMANDE DE LIVRAISON----------
+cursor.execute('''CREATE TABLE IF NOT EXISTS livraison
+                  (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                  date DATE,
+                  num_ramassage TEXT,
+                  lieux_ramassage TEXT,
+                  num_livraison TEXT,
+                  commune_liv TEXT,
+                  montant TEXT,
+                  contact_depot TEXT)''')
 conn.commit()
 conn.close()
+
+# ------------ROUTE DEMENDE DE LIVRAISON------------------------
+@app.route('/livraison', methods=['POST', 'GET'])
+def livraison():
+    date = request.form.get('date')
+    num_ramassage = request.form.get('num_ramassage')
+    lieux_ramassage = request.form.get('lieux_ramassage')
+    num_livraison = request.form.get('num_livraison')
+    commune_liv = request.form.get('commune_liv')
+    montant = request.form.get(' montant')
+    contact_depot = request.form.get('contact_depot')
+     # Insérer les données dans la base de données
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute('''INSERT INTO livraison (date, num_ramassage, lieux_ramassage,  num_livraison, commune_liv, montant, contact_depot)
+                      VALUES (?, ?, ?, ?, ?, ?, ?)''',
+                   (date, num_ramassage, lieux_ramassage,  num_livraison, commune_liv, montant, contact_depot))
+    conn.commit()
+    conn.close()
+
+    return render_template('demande_livraison.html')
 
 
 
@@ -459,6 +493,18 @@ def process_mecanicien():
 
 
     return render_template ('succès.html')
+
+
+
+
+
+
+
+
+
+              
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -11,18 +11,20 @@
 </head>
 <body>
   <div class="tab">
+    <button class="tablinks"><a style="color: rgb(21, 21, 100); border: 1px solid; box-shadow: 1px 1px 1px; font-size: 20px; background: rgb(212, 212, 237);text-decoration: none; " href="/menu_accueil">YakaTransport</a></button>
     <button class="tablinks active" onclick="openTab(event, 'tab1')">Chauffeur personnel</button>
     <button class="tablinks" onclick="openTab(event, 'tab2')">Livreur à moto</button>
     <button class="tablinks" onclick="openTab(event, 'tab3')">Chauffeur de vtc</button>
     <button class="tablinks" onclick="openTab(event, 'tab4')">Mécanicien</button>
+    
   </div>
-
   <div id="tab1" class="tabcontent" style="display: block;">
     <h2>Conducteur</h2>
     <p>Remplissez toutes les informations du formulaire. L'examination du dossiers prendra au maximum un mois.</p>
     <hr>
     <div class="form-container">
       <h2>Formulaire de dépôt de dossier - Conducteur</h2>
+      <hr>
       <form action="/process_conducteur" method="POST" enctype="multipart/form-data">
         <div id="affichageInfos"></div>
 
@@ -82,6 +84,7 @@
     <hr>
     <div class="form-container">
       <h2>Formulaire de dépôt de dossier - Moto</h2>
+      <hr>
       <form action="/process_moto" method="POST">
         <label for="nomMoto">Nom complet :</label>
         <input type="text" id="nomMoto" name="nomMoto" required>
@@ -133,6 +136,7 @@
    <hr>
     <div class="form-container">
       <h2>Formulaire de recrutement - Chauffeur VTC</h2>
+      <hr>
       <form action="/process_chauffeur_vtc" method="POST"  enctype="multipart/form-data">
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
@@ -165,13 +169,13 @@
         <textarea id="motivation" name="motivation" required></textarea>
         
         <label for="cv">CV :</label>
-        <input class="recruitment-file" type="file" id="cv" name="cv" required>
+        <input class="depot_fiche" type="file" id="cv" name="cv" required>
         
         <label for="photoIdentite">Photo d'identité:</label>
-        <input class="recruitment-file" type="file" id="photoIdentite" name="photoIdentite" required>
+        <input class="depot_fiche" type="file" id="photoIdentite" name="photoIdentite" required>
         
         <label for="permis">Copie du permis de conduire :</label>
-        <input class="recruitment-file" type="file" id="permis" name="permis" required>
+        <input class="depot_fiche" type="file" id="permis" name="permis" required>
         
         <hr>
         <input type="submit" value="Envoyer">
@@ -181,11 +185,12 @@
 
   <div id="tab4" class="tabcontent">
     <h2>Mécanicien</h2>
-    <p>Remplissez toutes les informations du formulaire. L'examination du dossiers prendra au maximum un mois.</p>
-    <p>N.B:Après examen du dossier vous serez soumis à un text avant validation.</p>
+    <p>Remplissez toutes les informations du formulaire. L'examination du dossiers prendra au maximum un mois. <br>N.B:Après examen du dossier vous serez soumis à un text avant validation.</p>
+   
     <hr>
     <div class="form-container">
       <h3>Formulaire de recrutement - Mécanicien</h3>
+      <hr>
       <form action="/process_mecanicien" method="POST" enctype="multipart/form-data">
         <label for="nom">Nom complet :</label>
         <input type="text" id="nom" name="nom" required>
@@ -202,14 +207,14 @@
         <label for="dateNaissance">Date de naissance :</label>
         <input type="date" id="dateNaissance" name="dateNaissance" required>
         
-        <label for="experience">Expérience en tant que mécanicien :</label>
-        <textarea id="experience" name="experience" required></textarea>
+        <label for="experience">Avez-vous un garage auto? :</label>
+        <textarea id="experience" name="experience" placeholder="si oui donnez la situation géographique" required></textarea>
         
         <label for="formation">Formations complémentaires :</label>
         <textarea id="formation" name="formation" required></textarea>
         
         <label for="competences">Compétences clés :</label>
-        <textarea id="competences" name="competences" required></textarea>
+        <textarea id="competences" name="competences" placeholder="citez quelques exemples de ce que vous savez faire" required></textarea>
         
         <label for="disponibilite">Disponibilité :</label>
         <input type="text" id="disponibilite" name="disponibilite" required>
@@ -218,26 +223,31 @@
         <textarea id="motivation" name="motivation" required></textarea>
         
         <label for="cv">CV :</label>
-        <input class="recruitment-file" type="file" id="cv" name="cv" required>
+        <input class="depot_fiche" type="file" id="cv" name="cv" required>
         
         <label for="photoIdentite">Photo d'identité:</label>
-        <input class="recruitment-file" type="file" id="photoIdentite" name="photoIdentite" required>
+        <input class="depot_fiche" type="file" id="photoIdentite" name="photoIdentite" required>
         
         <label for="diplome">Copie du diplôme :</label>
-        <input class="recruitment-file" type="file" id="diplome" name="diplome" required>
+        <input class="depot_fiche" type="file" id="diplome" name="diplome" required>
         
         <hr>
         <input type="submit" value="Envoyer">
       </form>
+      
     </div>
   </div> 
 
  
   <script src="../static/js/depot_dossier.js"></script>
 </body>
-</html>
 
-  <script>
+
+
+
+
+
+<script>
   function afficherInfosConducteur(event) {
     event.preventDefault(); // Empêche le formulaire de se soumettre normalement
 
@@ -258,3 +268,7 @@
     document.getElementById("affichageInfos").innerHTML = contenuHTML;
   }
 </script>
+
+</html>
+
+ 

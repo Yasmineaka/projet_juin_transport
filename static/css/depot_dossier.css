@@ -3,17 +3,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(#ffffff, #9198e5);
   }
 
   h1 {
     text-align: center;
     padding: 20px;
   }
+  h2{
+    font-size: 20px;
+  }
+  p{font-size: 15px;}
 
   .tab {
     overflow: hidden;
-    background-color: rgb(182, 182, 239);
+    background-color: white
   }
+
 
   .tab button {
     background-color: inherit;
@@ -48,13 +54,14 @@ body {
 
   label{
     font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   .form-container {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: rgb(224, 224, 247);
+    border: 1px solid #c9c8c8;
+    background-color: rgb(249, 249, 249);
   }
   
   .form-container h2 {
@@ -70,6 +77,7 @@ body {
   
   .form-container input[type="text"],
   .form-container input[type="email"],
+  .form-container input[type="tel"],
   .form-container input[type="date"] {
     width: 100%;
     padding: 8px;
@@ -99,11 +107,14 @@ body {
   
   .form-container input[type="submit"] {
     background-color: #4CAF50;
-    color: #fff;
+    color: #ffff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+  textarea{
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .form-container input[type="submit"]:hover {
