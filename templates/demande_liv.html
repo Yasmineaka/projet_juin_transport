@@ -56,6 +56,150 @@
       max-width: 200px;
       margin-top: 5px;
     }
+    /*  */
+    /* onglets */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#ffffff, #9198e5);
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  p{font-size: 15px;}
+
+  .tab {
+    overflow: hidden;
+    background-color: white
+  }
+
+
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    border-radius: 15px 15px 0 0;
+    transition: 0.3s;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .tab button:hover {
+    background-color: white;
+  }
+
+  .tab button.active {
+    background-color: white;
+    border-bottom: 2px solid rgb(130, 130, 248);
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #c8c4c4;
+    border-top: none;
+  }
+
+  /* formulaire conducteur */
+
+  label{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #c9c8c8;
+    background-color: rgb(249, 249, 249);
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="tel"],
+  .form-container input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  .form-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  .form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: #ffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  textarea{
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .form-container input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+
+.depot_fiche{
+    border: 1px dashed;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(182, 182, 239);
+    border-radius: 10px;
+}
+
+  /* responsivité */
+  @media screen and (max-width: 600px) {
+    .tab button {
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+  }
+
+
+  
+ 
   </style>
 </head>
 <body>
@@ -138,7 +282,7 @@
     </table>
   </div>
 
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Écouteur d'événement pour la soumission du formulaire
       document.getElementById('myForm').addEventListener('submit', function(event) {
@@ -368,8 +512,112 @@
 }
 document.getElementById('addButton').addEventListener('click', function() {
   // Afficher un formulaire vide ou une fenêtre modale pour ajouter de nouvelles données
-});
+}); -->
 
+
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  // Écouteur d'événement pour la soumission du formulaire
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+    // Récupération des valeurs des champs du formulaire
+    var nom = document.getElementById('nom').value;
+    var adresse = document.getElementById('adresse').value;
+    
+    // Récupérer les autres valeurs des champs du formulaire de la même manière
+
+    // Validation des données (vous pouvez ajouter vos propres validations ici)
+    if (nom === '' || adresse === '') {
+      showMessage('Veuillez remplir tous les champs du formulaire.', 'error');
+      return;
+    }
+
+    // Création de l'objet FormData pour l'envoi des données avec les fichiers
+    var formData = new FormData();
+    formData.append('nom', nom);
+    formData.append('adresse', adresse);
+    // Ajouter les autres champs du formulaire et les fichiers ici
+
+    // Envoi des données via AJAX (simulation)
+    sendData(formData);
+  });
+
+  // Fonction pour envoyer les données via AJAX (simulation)
+  function sendData(formData) {
+    // Vous pouvez effectuer ici une requête AJAX réelle pour envoyer les données à un serveur
+
+    // Simulation de l'envoi des données
+    setTimeout(function() {
+      showMessage('Données soumises avec succès.', 'success');
+      resetForm(); // Réinitialise le formulaire
+      saveData(formData); // Sauvegarde les données dans le cache du navigateur
+      displayData(); // Affiche les données dans le tableau
+    }, 1000);
+  }
+
+  // Fonction pour réinitialiser le formulaire
+  function resetForm() {
+    document.getElementById('myForm').reset();
+  }
+
+  // Fonction pour afficher un message
+  function showMessage(message, type) {
+    var messageDiv = document.getElementById('message');
+    messageDiv.innerHTML = message;
+    messageDiv.className = type;
+  }
+
+  // Fonction pour sauvegarder les données dans le cache du navigateur
+  function saveData(formData) {
+    var data = {
+      nom: formData.get('nom'),
+      adresse: formData.get('adresse')
+      // Ajouter les autres champs du formulaire ici
+    };
+
+    var existingData = loadData();
+    existingData.push(data);
+    localStorage.setItem('formData', JSON.stringify(existingData));
+  }
+
+  // Fonction pour charger les données à partir du cache du navigateur
+  function loadData() {
+    var existingData = localStorage.getItem('formData');
+    if (existingData) {
+      return JSON.parse(existingData);
+    }
+    return [];
+  }
+
+  // Fonction pour afficher les données dans le tableau
+  function displayData() {
+    var tableBody = document.querySelector('#dataTable tbody');
+    tableBody.innerHTML = '';
+
+    var data = loadData();
+    data.forEach(function(item) {
+      var row = document.createElement('tr');
+      var nameCell = document.createElement('td');
+      nameCell.textContent = item.nom;
+      var adresseCell = document.createElement('td');
+      adresseCell.textContent = item.adresse;
+      // Ajouter les autres cellules de données ici
+
+      row.appendChild(nameCell);
+      row.appendChild(adresseCell);
+      // Ajouter les autres cellules de données ici
+
+      tableBody.appendChild(row);
+    });
+  }
+
+  // Appel initial pour afficher les données dans le tableau
+  displayData();
+});
 
   </script>
 </body>

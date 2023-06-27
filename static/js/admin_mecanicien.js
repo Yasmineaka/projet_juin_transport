@@ -19,52 +19,41 @@ function validateForm(){
       }      
 
     if (adresse === ""){
-        alert("Vous devez entrer un adresse");
         return false;
     }
     if (telephone === ""){
-        alert("Vous devez entrer un lieux");
         return false;  
     }
     if (email === ""){
-        alert("Veillez entrer un email");
         return false;
     }
    
     if (dateNaissance == ""){
-        alert("Vous devez entrer une date de naissance");
         return false;
     }
     if (experience == ""){
-        alert("Vous devez entrer une expérience");
         return false;
     }
     if (formation == ""){
-        alert("Ce champs ne doit pas etre vide");
         return false;
     }
     if (competences == ""){
-        alert("Ce champs ne doit pas etre vide");
         return false;
     }
-    if (disponibilite == " "){
-        alert("Ce champs ne doit pas etre vide");
+    if (disponibilite == ""){
         return false;
     }
     if (motivation == ""){
-        alert("Vous devez entrer le genre de l'employé");
         return false;
     }
     if (cv == ""){
-        alert("Vous devez entrer un fichier");
         return false;
     }
     if (photoIdentite == ""){
-        alert("Vous devez entrer un fichier");
         return false;
     }
     if (diplome == ""){
-        alert("Vous devez entrer un fichier");
+
         return false;
     }
 

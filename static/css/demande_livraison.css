@@ -1,83 +1,110 @@
 
-body{
+ body {
     margin: 0;
     padding: 0;
-}
-
-table button{
+  }
+  
+  table button {
     background: #9198e5;
     margin: 2px;
     border-radius: 10px;
     color: white;
     border: 1px solid;
-} 
-
-.ligne{
+  }
+  
+  .ligne {
     position: relative;
-    border: 0.1px solid ;
-    width: 450px;
+    border: 0.1px solid;
+    width: 90%;
+    max-width: 450px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    left: 39%;
-    border-radius: 10px ;
-    height:auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: auto;
     background: white;
-}
-
-label{
-  font-size: 15px;
-  margin-left: 10%;
-} 
-.div_label_input{
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  label {
+    position: relative;
+    font-size: 15px;
+    margin-left: 10%;
+  }
+  
+  .div_label_input {
     margin-top: 15px;
-}
-input{
-    width: 330px;
+  }
+  
+  input {
+    width: 80%;
     height: 35px;
     font-size: 16px;
     margin-left: 10%;
     border-radius: 5px;
     border: 0.2px solid;
-}
-
-.button5{
+    box-sizing: border-box;
+  }
+  
+  .button5 {
     position: relative;
     height: 30px;
     width: 80px;
     border: 1px solid white;
     background: #9198e5;
     border-radius: 7px;
-    /* margin-left: 30%; */
     color: white;
-    margin: 20px;
-    left: 35%;
-}
-
-
-td{
-    border: 1px solid ;
+    margin: 15px auto;
+    display: block;
+  }
+  
+  td {
+    border: 1px solid;
     height: 50px;
     text-align: center;
     font-size: 17px;
-   background: white;   
-}
-
-th {
+    background: white;
+  }
+  
+  th {
     background: white;
     color: rgb(66, 63, 63);
-    border:1px solid; 
+    border: 1px solid;
     font-size: 20px;
-        
-} 
-
-
-table{
+  }
+  
+  table {
     position: relative;
     border: 1px solid rebeccapurple;
-    width: 70%;
+    width: 90%;
+    max-width: 70%;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    left: 15%;
-   }
-::placeholder{
+    margin: 0 auto;
+  }
+  
+  ::placeholder {
     font-size: 15px;
-}
+  }
+  
+  @media screen and (max-width: 600px) {
+    .ligne {
+      width: 70%;
+      max-width: 100%;
+    }
+  
+    input {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    table {
+      width: 90%;
+      max-width: 100%;
+    }
+    label{
+        margin-left: -0.5%;
+    }
+  }
+  

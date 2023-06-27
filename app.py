@@ -280,7 +280,7 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS livraison
                   lieux_ramassage TEXT,
                   num_livraison TEXT,
                   commune_liv TEXT,
-                  montant TEXT,
+                  montant INTEGER,
                   contact_depot TEXT)''')
 conn.commit()
 conn.close()
@@ -360,7 +360,7 @@ def process_conducteur():
     if copiePermis_file:
         copiePermis_file.save(os.path.join(app.config['UPLOAD_FOLDER'], copiePermis_filename))
 
-    return render_template ('succès.html')
+    return render_template ('succes.html')
     
 
 
@@ -394,7 +394,7 @@ def process_moto():
                    (nomMoto, adresseMoto, telephoneMoto, emailMoto, disponibiliteMoto, experienceMoto, formationMoto, permisMoto, competencesMoto, referencesMoto, motivationMoto, salaireMoto, commentairesMoto))
     conn.commit()
     conn.close()
-
+    return render_template('succes.html')
 
 
 
@@ -440,7 +440,7 @@ def process_chauffeur_vtc():
     if permis:
         permis.save(os.path.join(app.config['UPLOAD_FOLDER'], permis_filename))
 
-    return render_template ('succès.html')
+    return render_template ('succes.html')
 
 
 
@@ -492,11 +492,13 @@ def process_mecanicien():
         diplome.save(os.path.join(app.config['UPLOAD_FOLDER'], diplome_filename))
 
 
-    return render_template ('succès.html')
+    return render_template ('succes.html')
 
 
-
-
+#----------------------------------------ADMIN DOSSIER MECANICIEN ---------------------------------------------------
+@app.route('/admin_mecanicien')
+def admin_mecanicien():
+    return render_template('admin_mecanicien.html')
 
 
 

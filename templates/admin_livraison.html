@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="../static/css/demande_livraison.css">
 
     <style>
-       
+       th{
+        font-size: 17px;
+        background: linear-gradient(#ffffff, #9198e5);
+       } 
     </style>
 </head>
 <body style="background: white">
     <div>
         <li style="list-style: none;"><a  style="text-decoration: none; margin: 10px; padding: 4px; top: 12px; position: relative; color: rgb(21, 21, 100);font-size: 20px; border: 1px solid; box-shadow: 1px 1px 1px; background: rgb(212, 212, 237);" href="{{url_for('admin')}}">YakaTransport</a></li> 
     </div>  
+    <h1 style="text-align: center;  font-size: 20px;">Admin-dossiers Livreurs</h1>
         <div class="div_rh1" >
             <div  class="div_rh2">
                 <table class="tableau" id="crudTable">
