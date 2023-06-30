@@ -1,6 +1,5 @@
 from werkzeug.utils import secure_filename
-
-
+from flask_migrate import Migrate
 import sqlite3
 from flask import Flask, request, render_template , flash
 import os
@@ -10,15 +9,17 @@ from flask import Flask, render_template, request, flash, redirect, url_for, ses
 import sqlite3
 import re
 
+
+
+
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
-
-
-
 app.config['UPLOAD_FOLDER'] = '/Users/imac_p12/Desktop/projet_juin_transport/uploards'
 
 # Configuration de la base de données
 DATABASE = "database.db"
+
+migrate=Migrate(app, DATABASE)
 
 def create_table():
     conn = sqlite3.connect(DATABASE)
